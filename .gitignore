@@ -1,0 +1,44 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+dist/
+
+# --- 가상환경 ---
+.venv/
+venv/
+env/
+
+# --- uv ---
+# uv.lock 은 reproducibility 위해 커밋함 (제외하지 않음)
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+.env
+.env.local
+.env.*.local
+
+# --- Logs / 임시 ---
+*.log
+.cache/
+tmp/
+
+# --- 외부 자료 (로컬 전용, 버전관리 제외) ---
+강의교안/
