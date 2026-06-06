@@ -8,6 +8,7 @@ dependencies = [
     "jupyterlab>=4.5.7",
     "langchain-community>=0.4.2",
     "langchain-core>=1.4.0",
+    "langchain-experimental>=0.4.2",
     "langchain-openai>=1.2.2",
     "langchain-tavily>=0.2.18",
     "langgraph>=1.2.2",
