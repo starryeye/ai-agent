@@ -13,7 +13,8 @@ ai-agent/
 │       ├── projects/  # 입문 프로젝트 (챗봇, Tool Calling, Structured Output 등) — LLM 사용
 │       ├── patterns/  # 에이전트 패턴 (Reflection, Plan&Execute, 멀티에이전트 등)
 │       ├── rag/       # RAG (ChromaDB 벡터검색, 하이브리드, 관련성/환각 평가 등)
-│       └── prebuilt/  # 사전구축 라이브러리 (langgraph-supervisor, langgraph-swarm 등)
+│       ├── prebuilt/  # 사전구축 라이브러리 (langgraph-supervisor, langgraph-swarm 등)
+│       └── mcp/       # MCP (Model Context Protocol) 서버·클라이언트 예제 (.py)
 ├── concepts/          # 프레임워크 무관 개념 (agent-patterns, rag, graphrag, ...)
 ├── projects/          # 프레임워크/주제 통합 프로젝트
 └── notes/             # 자유 학습 노트, 논문 정리
