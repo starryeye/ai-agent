@@ -43,7 +43,7 @@ async def root():
 
 # ----------------------------
 # 2. LangGraph 에이전트 정의
-#    [basics 복습] State(add_messages) + chatbot ⇄ web_scraper 루프
+#    [basics] State(add_messages) + chatbot ⇄ web_scraper 루프
 # ----------------------------
 class State(TypedDict):
     messages: Annotated[list, add_messages]

@@ -35,7 +35,7 @@ assert os.getenv("OPENAI_API_KEY"), "OPENAI_API_KEY 가 .env 에 없습니다"
 
 model = ChatOpenAI(model="gpt-4o")
 
-# [basics 복습] supervisor 가 고를 작업자 목록
+# [basics] supervisor 가 고를 작업자 목록
 members = ["file_searcher", "web_searcher"]
 options = members + ["FINISH"]
 
@@ -70,7 +70,7 @@ async def run():
         "Each worker performs a task and reports results. When finished, respond with FINISH."
     )
 
-    # [basics 복습] supervisor: 구조화 출력으로 다음 작업자/FINISH 결정
+    # [basics] supervisor: 구조화 출력으로 다음 작업자/FINISH 결정
     async def supervisor_node(state: State) -> Command[Literal[*members, "__end__"]]:
         messages = [{"role": "system", "content": system_prompt}] + state["messages"]
         response = await model.with_structured_output(Router).ainvoke(messages)
@@ -99,7 +99,7 @@ async def run():
             goto="supervisor",
         )
 
-    # [basics 복습] Supervisor 그래프 조립
+    # [basics] Supervisor 그래프 조립
     graph_builder = StateGraph(State)
     graph_builder.add_edge(START, "supervisor")
     graph_builder.add_node("supervisor", supervisor_node)
